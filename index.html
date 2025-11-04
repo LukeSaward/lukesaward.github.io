@@ -1,25 +1,24 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <link rel="stylesheet" href="clock.css">
 <body onload="startTime()">
-<div class="myText" id="txt"></div>
-<script>
-function startTime() {
-  var today = new Date();
-  var currentDate = ("0" + today.getDate()).slice(-2);
-  var month = today.getMonth() + 1;
-  var currentMonth = ("0" + month).slice(-2);
-  var currentHours = ("0" + today.getHours()).slice(-2);
-  var currentMinutes = ("0" + today.getMinutes()).slice(-2);
-  var currentSeconds = ("0" + today.getSeconds()).slice(-2);
-  document.getElementById('txt').innerHTML = "<br/>" + currentMonth + "/" + currentDate + "/" + today.getFullYear() + " " + currentHours + ":" + currentMinutes + ":" + currentSeconds;
-  setTimeout(startTime, 1000);
-}
-
-function checkTime(i) {
-  if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
-  return i;
-}
-</script>
+  <div class="myText" id="txt"></div>
+  <script>
+    function startTime() {
+      var today = new Date();
+      var currentDate = ("0" + today.getDate()).slice(-2);
+      var month = today.getMonth() + 1;
+      var currentMonth = ("0" + month).slice(-2);
+      var currentHours = ("0" + today.getHours()).slice(-2);
+      var currentMinutes = ("0" + today.getMinutes()).slice(-2);
+      var currentSeconds = ("0" + today.getSeconds()).slice(-2);
+      document.getElementById('txt').innerHTML = "<br/>" + currentMonth + "/" + currentDate + "/" + today.getFullYear() + " " + currentHours + ":" + currentMinutes + ":" + currentSeconds;
+      setTimeout(startTime, 1000);
+    }
+    function checkTime(i) {
+      if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+      return i;
+    }
+  </script>
 </body>
 </html>
